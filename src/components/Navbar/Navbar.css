@@ -1,0 +1,316 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 72px;
+  width: 100%;
+  background: var(--surface, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.mobile-menu-btn {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: var(--surface-2, #f3f4f6);
+  color: var(--text, #111827);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 22px;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.navbar-left {
+  flex-shrink: 0;
+}
+
+.navbar-left h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =========================
+   CENTER
+========================= */
+
+.navbar-center {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  width: min(450px, 100%);
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.search-box svg {
+  color: #6b7280;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+  color: #111827;
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* =========================
+   ICON BUTTON
+========================= */
+
+.icon-btn {
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #111827;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+  font-size: 21px;
+}
+
+.icon-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MOBILE SEARCH BUTTON
+========================= */
+
+.mobile-search-btn {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #111827;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-left h2 {
+    font-size: 30px;
+  }
+
+  .search-box {
+    width: 300px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 64px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .navbar-left h2 {
+    font-size: 22px;
+  }
+
+  .navbar-center {
+    display: none;
+  }
+
+  .navbar-right {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .mobile-search-btn {
+    display: flex;
+  }
+
+  .icon-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  .profile-avatar {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-left h2 {
+    font-size: 20px;
+  }
+
+  .mobile-menu-btn,
+  .mobile-search-btn,
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profile-avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .navbar-right {
+    gap: 5px;
+  }
+}
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media (max-width: 360px) {
+  .navbar {
+    padding: 0 8px;
+    gap: 6px;
+  }
+
+  .mobile-menu-btn {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .navbar-left {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .navbar-left h2 {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  /* Hide theme toggle on very small screens */
+  .navbar-right > :first-child {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 5px;
+    margin-left: 0;
+  }
+
+  .mobile-search-btn {
+    display: none;
+  }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .profile-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+}

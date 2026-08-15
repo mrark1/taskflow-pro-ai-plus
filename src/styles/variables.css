@@ -1,0 +1,39 @@
+:root {
+  /* Theme Colors */
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --text: #111827;
+  --text-secondary: #6b7280;
+
+  /* Brand */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  /* Borders & Shadows */
+  --border: #e5e7eb;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --surface: #1f2937;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --text-secondary: #9ca3af;
+
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+
+  --border: #374151;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+
+  --success: #22c55e;
+  --warning: #fbbf24;
+  --danger: #ef4444;
+}
